@@ -1,0 +1,14 @@
+<header>
+  <div class="nav">
+    <div class="logo">
+    </div>
+    <nav>
+      <a routerLink="/home">Home</a>
+      <a routerLink="/post">Post</a>
+      <a *ngIf="!authService.isLoggedIn" routerLink="/home">Login</a>
+
+<a (click)="logout()" *ngIf="authService.isLoggedIn" routerLink="/logout">Logout</a>
+
+    </nav>
+  </div>
+</header>
