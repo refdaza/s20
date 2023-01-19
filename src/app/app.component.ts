@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(
     private usersService: UsersService
   ) { }
-  listar(){
+  mostrar(){
     this.usersService.getAllUsers()
     .subscribe((data) => this.users = data)
   }
